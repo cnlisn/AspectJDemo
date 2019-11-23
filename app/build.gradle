@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.hujiang.android-aspectjx'
+apply from: "../basic.gradle"
+android {
+
+    defaultConfig {
+        applicationId "com.lisn.aspectjdemo"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    //aspectjrt的依赖
+    implementation 'org.aspectj:aspectjrt:1.8.13'
+}
